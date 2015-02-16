@@ -24,5 +24,19 @@ namespace AstroCalc.UnitTests
 
 			Assert.AreEqual(date.ToShortDateString(), easter2012.ToShortDateString());
 		}
+
+      [TestMethod]
+      public void DateOfEasterException()
+      {
+         try
+         {
+            DateTime date = AstroCalc.DateAndTime.DateOfEaster(1582);
+            Assert.Fail("no exception thrown");
+         }
+         catch (Exception ex)
+         {
+            Assert.IsTrue(ex is System.ArgumentException);
+         }
+      }
 	}
 }
