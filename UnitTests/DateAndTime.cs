@@ -14,7 +14,15 @@ namespace AstroCalc.UnitTests
 			DateTime easter2009 = new DateTime(2009, 4, 12);
 
 			Assert.AreEqual(date.ToShortDateString(), easter2009.ToShortDateString());
-			Assert.AreEqual(date.ToShortTimeString(), easter2009.ToShortTimeString());
+		}
+
+		[TestMethod]
+		public void DateOfEaster2012()
+		{
+			DateTime date = AstroCalc.DateAndTime.DateOfEaster(2012);
+			DateTime easter2012 = new DateTime(2012, 4, 8);
+
+			Assert.AreEqual(date.ToShortDateString(), easter2012.ToShortDateString());
 		}
 	}
 }
