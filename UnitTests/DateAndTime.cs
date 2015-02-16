@@ -5,7 +5,7 @@ using AstroCalc;
 namespace AstroCalc.UnitTests
 {
 	[TestClass]
-	public class DatesAndTimes
+	public class DateAndTime
 	{
 		[TestMethod]
 		public void DateOfEaster2009()
