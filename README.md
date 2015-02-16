@@ -1,2 +1,2 @@
 # AstroCalc
-A Dynamic Link Library which provides some functions for astronomical calculations
+A Dynamic Link Library (DLL) which provides some functions for astronomical calculations
