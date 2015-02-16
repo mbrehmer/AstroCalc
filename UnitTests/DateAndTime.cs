@@ -28,15 +28,15 @@ namespace AstroCalc.UnitTests
 		[TestMethod]
 		public void DateOfEasterException()
 		{
-         try
+			try
 			{
 				DateTime date = AstroCalc.DateAndTime.DateOfEaster(1582);
 				Assert.Fail("no exception thrown");
-         }
-         catch (Exception ex)
-         {
+			}
+			catch (Exception ex)
+			{
 				Assert.IsTrue(ex is System.ArgumentException);
-         }
+			}
 		}
 	}
 }
