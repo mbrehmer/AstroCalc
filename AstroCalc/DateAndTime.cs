@@ -11,8 +11,8 @@ namespace AstroCalc
 		 /// <summary>
 		 /// Calculates the date of Easter for a given year.
 		 /// </summary>
-		 /// <param name="date">Date and Time for the calculation</param>
-		 /// <returns>The date of Ester</returns>
+		 /// <param name="year">The year for the calculation</param>
+		 /// <returns>The date of Easter</returns>
 		 public static DateTime DateOfEaster(int year)
 		 {
 			 int a = year % 19;
