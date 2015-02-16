@@ -16,7 +16,7 @@ namespace AstroCalc
 		 public static DateTime DateOfEaster(int year)
 		 {
 			 int a = year % 19;
-			 double b = Math.Truncate(year / 100.0); // Who doesn't Math.Truncate() return an Integer ???
+			 double b = Math.Truncate(year / 100.0); // Why doesn't Math.Truncate() return an Integer ???
 			 int c = year % 100;
 			 double d = Math.Truncate(b / 4.0);
 			 int e = Convert.ToInt32(b) % 4;
