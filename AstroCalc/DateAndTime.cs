@@ -13,10 +13,11 @@ namespace AstroCalc
 		 /// </summary>
 		 /// <param name="year">The year for the calculation</param>
 		 /// <returns>The date of Easter</returns>
+		 /// <exception cref="System.ArgumentException">Thrown when the parameter lower then 1583</exception>
 		 public static DateTime DateOfEaster(int year)
 		 {
 			 if (year <= 1582)
-				 throw new System.ArgumentException("Parameter cannot be <= 1582", "year");
+				 throw new System.ArgumentException("Parameter cannot be lower then 1583", "year");
 
 			 int a = year % 19;
 			 double b = Math.Truncate(year / 100.0); // Why doesn't Math.Truncate() return an Integer ???
