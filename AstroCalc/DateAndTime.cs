@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AstroCalc
 {
-    public class AstroCalc
+    public class DateAndTime
     {
     }
 }
