@@ -9,12 +9,15 @@ namespace AstroCalc
     public static class DateAndTime
     {
 		 /// <summary>
-		 /// Calculates the date of Easter for a given year.
+		 /// Calculates the date of Easter for a given year after 1582
 		 /// </summary>
 		 /// <param name="year">The year for the calculation</param>
 		 /// <returns>The date of Easter</returns>
 		 public static DateTime DateOfEaster(int year)
 		 {
+			 if (year <= 1582)
+				 throw new System.ArgumentException("Parameter cannot be <= 1582", "year");
+
 			 int a = year % 19;
 			 double b = Math.Truncate(year / 100.0); // Why doesn't Math.Truncate() return an Integer ???
 			 int c = year % 100;
