@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AstroCalc
 {
+	/// <summary>
+	/// This class provides the funktions for dates and times
+	/// </summary>
     public static class DateAndTime
     {
 		 /// <summary>

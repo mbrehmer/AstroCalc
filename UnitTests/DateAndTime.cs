@@ -4,9 +4,15 @@ using AstroCalc;
 
 namespace AstroCalc.UnitTests
 {
+	/// <summary>
+	/// This class provides the Unit Tests for the Class AstroCalc.DateAndTime
+	/// </summary>
 	[TestClass]
 	public class DateAndTime
 	{
+		/// <summary>
+		/// This method tests the function AstroCalc.DateAndTime.DateOfEaster() with the parameter 2009;
+		/// </summary>
 		[TestMethod]
 		public void DateOfEaster2009()
 		{
@@ -16,6 +22,9 @@ namespace AstroCalc.UnitTests
 			Assert.AreEqual(date.ToShortDateString(), easter2009.ToShortDateString());
 		}
 
+		/// <summary>
+		/// This method tests the function AstroCalc.DateAndTime.DateOfEaster() with the parameter 2012;
+		/// </summary>
 		[TestMethod]
 		public void DateOfEaster2012()
 		{
@@ -25,6 +34,9 @@ namespace AstroCalc.UnitTests
 			Assert.AreEqual(date.ToShortDateString(), easter2012.ToShortDateString());
 		}
 
+		/// <summary>
+		/// This method tests the correct throw of the exception by the method AstroCalc.DateAndTime.DateOfEaster()
+		/// </summary>
 		[TestMethod]
 		public void DateOfEasterException()
 		{
