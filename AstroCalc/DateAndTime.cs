@@ -59,7 +59,7 @@ namespace AstroCalc
 
 			A = Convert.ToInt32(Math.Truncate(date.Year / 100.0));
 			if (date > new DateTime(1582, 10, 15))
-				B = Convert.ToInt32(Math.Truncate(A / 4.0));
+				B = 2 - A +Convert.ToInt32(Math.Truncate(A / 4.0));
 			else
 				B = 0;
 

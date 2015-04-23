@@ -50,5 +50,38 @@ namespace AstroCalc.UnitTests
 				Assert.IsTrue(ex is System.ArgumentException);
 			}
 		}
+
+		/// <summary>
+		/// This method tests the AstroCalc.DateAndTime.JulianDate() with the date 19.06.2009
+		/// </summary>
+		[TestMethod]
+		public void JulianDate1()
+		{
+			double JulianDate = AstroCalc.DateAndTime.JulianDate(new DateTime(2009, 6, 19));
+
+			Assert.AreEqual(JulianDate, 2455001.5);
+		}
+
+		/// <summary>
+		/// This method tests the AstroCalc.DateAndTime.JulianDate() with the date 30.07.1984
+		/// </summary>
+		[TestMethod]
+		public void JulianDate2()
+		{
+			double JulianDate = AstroCalc.DateAndTime.JulianDate(new DateTime(1984, 7, 30));
+
+			Assert.AreEqual(JulianDate, 2445911.5);
+		}
+
+		/// <summary>
+		/// This method tests the AstroCalc.DateAndTime.JulianDate() with the date 12.10.1492
+		/// </summary>
+		[TestMethod]
+		public void JulianDate3()
+		{
+			double JulianDate = AstroCalc.DateAndTime.JulianDate(new DateTime(1492, 10, 12));
+
+			Assert.AreEqual(JulianDate, 2266295.5);
+		}
 	}
 }
