@@ -36,5 +36,42 @@ namespace AstroCalc
 			DateTime DateOfEaster = new DateTime(year, Convert.ToInt32(n), p + 1);
 			return DateOfEaster;
 		}
+
+		/// <summary>
+		/// Calculates the Julian date for a given Gregorian date
+		/// </summary>
+		/// <param name="date">The date for the calculation</param>
+		/// <returns>The Julian date</returns>
+		public static double JulianDate(DateTime date)
+		{
+			int y_, m_, A, B, C, D;
+
+			if (date.Month == 1 || date.Month == 2)
+			{
+				y_ = date.Year - 1;
+				m_ = date.Month + 12;
+			}
+			else
+			{
+				y_ = date.Year;
+				m_ = date.Month;
+			}
+
+			A = Convert.ToInt32(Math.Truncate(date.Year / 100.0));
+			if (date > new DateTime(1582, 10, 15))
+				B = Convert.ToInt32(Math.Truncate(A / 4.0));
+			else
+				B = 0;
+
+			if (y_ < 0)
+				C = Convert.ToInt32(Math.Truncate(365.25 * y_) - 0.75);
+			else
+				C = Convert.ToInt32(Math.Truncate(365.25 * y_));
+
+			D = Convert.ToInt32(Math.Truncate(30.6001 * (m_+1)));
+
+			double JulianDate = B + C + D + date.Day + 1720994.5;
+			return JulianDate;
+		}
 	}
 }
